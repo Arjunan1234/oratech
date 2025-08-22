@@ -2,7 +2,7 @@ import React from "react";
 import "./faq.scss";
 import FAQAccordion from "./FAQAccordion";
 
-const Faq = () => {
+const FaqContent = () => {
   return (
     <section className="container faqContainer">
       <div className="faq">FAQs</div>
@@ -17,4 +17,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default FaqContent;

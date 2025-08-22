@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Title from "./components/Title/Title";
-import Faq from "./components/faq/faq.jsx";
 import CTASection from "./components/CTASection/CTASection.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Home from "./container/Home.jsx";
@@ -16,6 +15,7 @@ import Contact from "./container/Contact.jsx";
 import whatsapp from "../src/assets/images/whatsapp.webp";
 import backtotop from "../src/assets/images/back.png";
 import ScrollToTop from "./scroll.jsx";
+import FaqContent from "./components/Faq/FaqContent.jsx";
 
 const App = () => {
   const [showButton, setShowButton] = useState(false);
@@ -48,7 +48,7 @@ const App = () => {
           <Route path="/internship" element={<Internship />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Faq />
+        <FaqContent />
         <CTASection />
         <Footer />
 
