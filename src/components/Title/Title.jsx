@@ -1,5 +1,5 @@
 import React from "react";
-import "./Title.scss";
+import "./title.scss";
 import { FaRegClock, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Title = () => (
