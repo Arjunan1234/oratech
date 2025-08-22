@@ -1,0 +1,62 @@
+.title-bar {
+    background: #255cf1;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    padding: 18px 120px;
+    border-bottom: 3px solid #fff;
+
+
+    // Tablet (<= 1024px)
+    @media (max-width: 1024px) {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+
+    // Mobile (<= 600px)
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 13px;
+        gap: 0.4rem;
+        padding: 0.6rem 5vw;
+    }
+}
+
+.title-info,
+.title-contact>div {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+
+    a {
+        color: #fff;
+
+        font-size: 12px;
+    }
+}
+
+.title-contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    // Tablet (<= 1024px)
+    @media (max-width: 1024px) {
+        gap: 15px;
+    }
+
+    // Mobile (<= 600px)
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+    }
+}
+
+.title-icon {
+    font-size: 1em;
+    margin-right: 0.3em;
+}

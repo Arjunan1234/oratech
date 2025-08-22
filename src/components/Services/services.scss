@@ -1,0 +1,305 @@
+.services-container {
+    padding: 50px;
+}
+
+.services-header {
+    text-align: center;
+
+    .services-badge {
+        color: #2B4EFF;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+        /* 155.556% */
+        letter-spacing: -0.54px;
+        border-radius: 30px;
+        background: #F1F2F3;
+        padding: 4px 19px;
+    }
+
+    .services-title {
+        padding-top: 20px;
+        color: #040D43;
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        /* 100% */
+        letter-spacing: -1.92px;
+
+        @media (max-width: 768px) {
+            font-size: 2.2rem;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .services-subtitle {
+        padding-top: 15px;
+        margin: 0 auto;
+        max-width: 962px;
+        color: #2D2D30;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        /* 150% */
+        letter-spacing: -0.6px;
+
+        @media (max-width: 768px) {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.services-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.nav-btn {
+    padding: 10px 15px;
+    border: none;
+    background: #f8f9fa;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    color: #666;
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    // Hover effects
+    &:hover {
+        background: #e9ecef;
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        color: #333;
+    }
+
+    // Active state - when section is in view
+    &.active {
+        background: linear-gradient(135deg, #4a6cf7 0%, #3d5af1 100%);
+        color: #fff;
+        transform: translateY(0) scale(1);
+        box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
+        border: 2px solid #4a6cf7;
+        border-radius: 12px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+            animation: shimmer 2s infinite;
+        }
+
+        &:hover {
+            background: linear-gradient(135deg, #3d5af1 0%, #2e4de6 100%);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(74, 108, 247, 0.5);
+        }
+    }
+
+    // Smooth color transition during scrolling
+    &:not(.active) {
+        background: #f8f9fa;
+        color: #666;
+
+        &:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding-top: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+    min-height: 400px; // Ensure consistent spacing for intersection observer
+    padding: 20px;
+
+    &.left {
+        flex-direction: row;
+
+        .service-image {
+            margin-right: 80px;
+        }
+    }
+
+    &.right {
+        flex-direction: row-reverse;
+
+        .service-image {
+            margin-left: 40px;
+        }
+    }
+
+    img.service-image {
+        height: auto;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .service-content {
+        max-width: 600px;
+
+        .service-title {
+            color: #040D43;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            /* 133.333% */
+            letter-spacing: -1.2px;
+        }
+
+        .service-desc {
+            padding-top: 5px;
+            max-width: 505px;
+            color: #2D2D30;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            /* 150% */
+            letter-spacing: -0.6px;
+            padding-bottom: 25px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                padding: 8px 0;
+                position: relative;
+                color: #555;
+                font-weight: 500;
+
+
+            }
+        }
+    }
+
+    &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+
+        &.left {
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        &.right {
+            animation: slideInRight 1s ease forwards;
+        }
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .services-container {
+        padding: 20px;
+    }
+
+    .services-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .nav-btn {
+            font-size: 0.9rem;
+            padding: 8px 12px;
+        }
+    }
+
+    .service-item {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px;
+
+        &.left,
+        &.right {
+            .service-image {
+                margin: 0 !important;
+            }
+        }
+
+        img.service-image {
+            width: 250px;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.servicesContainerGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    gap: 24px;
+    padding: 32px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.serviceCard {
+    position: relative;
+    border-radius: 30px;
+    background: #FFF;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+
+        .serviceIcon {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .arrow {
+            transform: translate(4px, -4px);
+        }
+    }
+
+    .serviceIcon {
+        font-size: 48px;
+        margin-bottom: 24px;
+        display: block;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    h3 {
+        color: #040D43;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -1.2px;
+        margin-bottom: 16px;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    p {
+        color: #2D2D30;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: -0.6px;
+        margin: 0;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .arrow {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+        background: #D9D9D9;
+        max-width: 74px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+        .arrowWhite {
+            border-radius: 10px;
+            background: #FFF;
+            padding: 15px;
+            max-width: 54px;
+        }
+    }
+}
+
+// Responsive breakpoints
+@media (max-width: 768px) {
+    .servicesContainerGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .serviceCard {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .servicesContainerGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

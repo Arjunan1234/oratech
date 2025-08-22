@@ -1,0 +1,100 @@
+.testimonialCarousel {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .testimonialCard {
+        background: white;
+        border-radius: 15px;
+        display: flex !important; // override slick's inline styles
+        align-items: center;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 8px 24px rgb(149 157 165 / 0.2);
+        gap: 1.5rem;
+    }
+
+    .imageContainer {
+        flex-shrink: 0;
+        width: 180px;
+        height: 180px;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #f7d9d9; // light pink background to match image bg
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .content {
+        flex: 1;
+        position: relative;
+        font-family: "Arial", sans-serif;
+
+        .quoteMark {
+            font-size: 3.5rem;
+            color: #152fd4; // blue color
+            font-weight: 700;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            user-select: none;
+        }
+
+        .quote {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-left: 2rem; // space for quote mark
+            color: #222;
+            margin-bottom: 1rem;
+        }
+
+        .name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0b214f;
+        }
+
+        .designation {
+            font-size: 0.9rem;
+            color: #7f8592;
+        }
+    }
+
+    // Customize slick arrows
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #1d4ed8;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+        z-index: 2;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgb(29 78 216 / 0.4);
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #1662d8;
+        }
+    }
+
+    .prevArrow {
+        left: -50px;
+    }
+
+    .nextArrow {
+        right: -50px;
+    }
+}
