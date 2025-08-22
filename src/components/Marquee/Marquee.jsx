@@ -1,5 +1,5 @@
 import React from "react";
-import "./Marquee.scss";
+import "./marquee.scss";
 
 import audi from "../../assets/images/audi.svg";
 import coca from "../../assets/images/coca.svg";
