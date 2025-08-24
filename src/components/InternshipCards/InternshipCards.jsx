@@ -151,7 +151,7 @@ const InternshipCards = () => {
             </div>
 
             <div className="card-footer">
-              <div className="price">{program.price}</div>
+              <div className="price">₹{program.price}</div>
               <Button title="Apply for Internship" />
             </div>
           </div>

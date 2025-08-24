@@ -37,9 +37,11 @@
             color: #2B4EFF;
         }
 
-        // Hover effect for all links including home
-        &:hover a {
-            color: #2B4EFF;
+        // Hover effect for desktop only
+        @media (hover: hover) {
+            &:hover a {
+                color: #2B4EFF;
+            }
         }
     }
 
@@ -102,9 +104,15 @@
             border-bottom: 1px solid #f0f0f0;
             transition: color 0.3s ease;
 
-            &:hover,
             &.active {
                 color: #2B4EFF;
+            }
+
+            // Hover only on devices that support it (desktop)
+            @media (hover: hover) {
+                &:hover {
+                    color: #2B4EFF;
+                }
             }
         }
     }

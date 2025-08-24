@@ -6,7 +6,7 @@ import tick from "../../assets/images/tick.svg";
 const plans = [
   {
     title: "Basic",
-    price: 9,
+    price: 1500,
     description:
       "Essential monitoring and support for small teams getting started.",
     features: [
@@ -19,7 +19,7 @@ const plans = [
   },
   {
     title: "Standard",
-    price: 15,
+    price: 3000,
     description:
       "Comprehensive package for growing teams needing full-time support.",
     features: [
@@ -33,7 +33,7 @@ const plans = [
   },
   {
     title: "Premium",
-    price: 19,
+    price: 6000,
     description:
       "Complete solution for enterprises with proactive management and strategy.",
     features: [
@@ -66,8 +66,9 @@ const PricingPlans = () => {
           <h2 className="plan-title">{plan.title}</h2>
           <p className="description">{plan.description}</p>
           <div className="price">
-            <span className="currency">$</span>
-            <p className="amount">{plan.price}</p>/mo
+            <span className="currency">₹</span>
+            <span className="amount">{plan?.price}</span>
+            <span className="period">/mo</span>
           </div>
           <button
             className={`get-started ${plan.popular ? "extra-class" : ""}`}

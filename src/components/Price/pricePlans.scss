@@ -66,14 +66,16 @@
     align-items: flex-end;
     justify-content: flex-end;
     color: #FFF;
-    font-size: 24px;
     padding-top: 25px;
-    font-weight: 500;
+    gap: 2px;
+    /* Small gap between elements */
 
     .currency {
         color: #FFF;
         font-size: 24px;
-        padding-top: 10px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        /* Align with baseline */
     }
 
     .amount {
@@ -81,6 +83,14 @@
         font-size: 70px;
         font-weight: 700;
         letter-spacing: 1.4px;
+        line-height: 1;
+    }
+
+    .period {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 500;
+        /* Align with baseline */
     }
 }
 

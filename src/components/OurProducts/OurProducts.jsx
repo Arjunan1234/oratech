@@ -15,7 +15,7 @@ const OurProducts = () => {
       title: "Goyal Hospital",
       description:
         "Goyal Hospital: Efficiently showcase patient data, appointments, and facilities. Explore services, career opportunities, and advanced healthcare solutions.",
-      link: "https://priyamua.co.in/", // internal link
+      link: "https://goyalhospitals.in/",
       external: false,
     },
     {
@@ -25,7 +25,7 @@ const OurProducts = () => {
       title: "Bridal Website",
       description:
         "We created a stunning bridal website, optimized for speed and user experience. Showcase collections beautifully and engage clients seamlessly.",
-      link: "https://priyamua.co.in/", // external link
+      link: "https://priyamua.co.in/",
       external: true,
     },
   ];
@@ -45,8 +45,8 @@ const OurProducts = () => {
             key={product.id}
             href={product.link}
             className="product-item"
-            target={product.external ? "_blank" : "_self"}
-            rel={product.external ? "noopener noreferrer" : ""}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <img src={product.image} alt={product.alt} />
