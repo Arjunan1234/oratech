@@ -22,8 +22,14 @@ import achieve from "../../assets/images/achieve.svg";
 
 import tick1 from "../../assets/images/tick1.svg";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const InternshipCards = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate("/contact");
+  };
   const programs = [
     {
       id: 1,
@@ -151,8 +157,8 @@ const InternshipCards = () => {
             </div>
 
             <div className="card-footer">
-              <div className="price">₹{program.price}</div>
-              <Button title="Apply for Internship" />
+              {/* <div className="price">₹{program.price}</div> */}
+              <Button title="Apply for Internship" onClick={handleNavigate} />
             </div>
           </div>
         ))}

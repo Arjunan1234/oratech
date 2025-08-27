@@ -137,13 +137,16 @@ const Banner = () => {
 
   // Handle Learn More button click - scroll to a section on the same page
   const handleLearnMore = () => {
-    const targetSection = document.getElementById("services-section");
-    if (targetSection) {
-      targetSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+    // const targetSection = document.getElementById("services-section");
+    // if (targetSection) {
+    //   targetSection.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "start",
+    //   });
+    // }
+
+    navigate("/services");
+    window.scrollTo(0, 0);
 
     // Alternative: scroll to a specific section based on current service
     // const sectionId = `${services[currentSlide].title.toLowerCase().replace(/\s+/g, '-')}-section`;

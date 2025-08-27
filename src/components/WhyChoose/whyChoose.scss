@@ -55,6 +55,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    button {
+        cursor: pointer;
+    }
 }
 
 .ora-tech-list {

@@ -260,6 +260,7 @@
 }
 
 .card-footer {
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -269,6 +270,7 @@
     flex-wrap: wrap;
 
     button {
+        cursor: pointer;
         width: 100%;
         margin-top: 50px;
     }

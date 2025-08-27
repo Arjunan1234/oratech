@@ -4,6 +4,7 @@ import whyChoose from "../../assets/images/whyChoose.svg";
 import tick from "../../assets/images/tick.svg";
 import "./whyChoose.scss";
 import Button from "../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const benefits = [
   "Proven expertise in IT, Cloud, and DevOps solutions",
@@ -15,6 +16,12 @@ const benefits = [
 ];
 
 const WhyChoose = () => {
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate("/contact");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="container whyChooseContainer">
       <div className=" ora-tech-banner">
@@ -32,7 +39,7 @@ const WhyChoose = () => {
               </li>
             ))}
           </ul>
-          <Button title="Get Started with ORA Tech" />
+          <Button title="Get Started with ORA Tech" onClick={handleRedirect} />
         </div>
       </div>
     </section>
